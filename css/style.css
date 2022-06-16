@@ -475,10 +475,6 @@ h6 {
     background-color: #04134E;
   }
 
-  .menu__link:hover._active .menu__image-ibg svg path {
-    fill: #fff;
-  }
-
   .icon-aside-menu:hover {
     background-color: #1938d6;
   }
