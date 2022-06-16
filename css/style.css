@@ -468,13 +468,21 @@ h6 {
 
 @media (any-hover: hover) {
   .menu__link:hover {
-    color: #fff;
+    color: #3A57E8;
     background-color: #C4CCF8;
   }
 
   .menu__link:hover._active {
     color: #fff;
     background-color: #04134E;
+  }
+
+  .menu__link:hover._active .menu__image-ibg svg path {
+    fill: #fff;
+  }
+
+  .menu__link:hover .menu__image-ibg svg path {
+    fill: #3A57E8;
   }
 
   .icon-aside-menu:hover {
