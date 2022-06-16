@@ -312,11 +312,6 @@ h6 {
 
 .menu__logo-ibg span {
   padding-left: 3.75rem;
-  padding-right: 1.5625rem;
-}
-
-.menu__icon {
-  position: relative;
 }
 
 .menu__body {
@@ -326,13 +321,9 @@ h6 {
 .menu__items {
   position: relative;
   padding: 0.625rem 0;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   display: -ms-grid;
   display: grid;
   gap: 0.625rem;
-  transition: all 0.3s ease 0s;
 }
 
 .menu__items::before {
@@ -359,20 +350,15 @@ h6 {
   color: #ADB5BD;
 }
 
-.menu__title:not(:last-child) {
-  margin-bottom: 0.9375em;
-}
-
 .menu__link {
   padding: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0.3125rem;
-  padding-left: 0.625rem;
   font-weight: 400;
   line-height: 175%;
   color: #8A92A6;
@@ -403,6 +389,10 @@ h6 {
 .menu__link span {
   pointer-events: none;
   padding-left: 1.5625rem;
+}
+
+.menu__link .menu__image-ibg svg path {
+  fill: #3A57E8;
 }
 
 .menu__image-ibg {
@@ -487,10 +477,6 @@ h6 {
 
   .menu__link:hover._active .menu__image-ibg svg path {
     fill: #fff;
-  }
-
-  .menu__link:hover .menu__image-ibg svg path {
-    fill: #3A57E8;
   }
 
   .icon-aside-menu:hover {
