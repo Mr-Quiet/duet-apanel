@@ -332,6 +332,7 @@ h6 {
   display: -ms-grid;
   display: grid;
   gap: 0.625rem;
+  transition: all 0.3s ease 0s;
 }
 
 .menu__items::before {
@@ -343,6 +344,9 @@ h6 {
   bottom: 0;
   left: 0;
   background-color: #E9ECEF;
+  -webkit-transition: max-width 0.3s ease 0s;
+  -o-transition: max-width 0.3s ease 0s;
+  transition: max-width 0.3s ease 0s;
 }
 
 .menu-open .menu__items::before {
