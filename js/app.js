@@ -66,7 +66,7 @@
         const asideMenu = document.querySelector(".aside-menu");
         const asideMenuShow = asideMenu.hasAttribute("data-scroll-show");
         const asideMenuShowTimer = asideMenu.dataset.scrollShow ? asideMenu.dataset.scrollShow : 500;
-        const startPoint = asideMenu.dataset.scroll ? asideMenu.dataset.scroll : 1;
+        const startPoint = asideMenu.dataset.scroll ? asideMenu.dataset.scroll : 0;
         let scrollDirection = 0;
         let timer;
         document.addEventListener("windowScroll", (function(e) {
