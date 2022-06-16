@@ -191,6 +191,15 @@
     };
     const da = new DynamicAdapt("max");
     da.init();
+    document.addEventListener("click", (function(e) {
+        const target = e.target;
+        if (target.closest(".menu__link")) {
+            e.preventDefault();
+            const activeLink = document.querySelector(".menu__link._active");
+            if (activeLink) activeLink.classList.remove("_active");
+            if (!target.classList.contains("_active")) target.classList.add("_active");
+        }
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
