@@ -376,12 +376,16 @@ h6 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   white-space: nowrap;
+  -webkit-box-shadow: 0px 0px 3px rgba(138, 146, 166, 0.3);
+          box-shadow: 0px 0px 3px rgba(138, 146, 166, 0.3);
   max-width: 3.125rem;
 }
 
 .menu__link._active {
   color: #fff;
   background-color: #04134E;
+  -webkit-box-shadow: 0px 0px 5px rgba(138, 146, 166, 0.3);
+          box-shadow: 0px 0px 5px rgba(138, 146, 166, 0.3);
 }
 
 .menu__link._active .menu__image-ibg svg path {
