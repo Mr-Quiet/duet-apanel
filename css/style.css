@@ -282,9 +282,12 @@ h6 {
   max-width: 23.75rem;
 }
 
-.menu__header {
+.menu {
   position: relative;
   z-index: 10;
+}
+
+.menu__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,10 +394,6 @@ h6 {
   padding-left: 1.5625rem;
 }
 
-.menu__link .menu__image-ibg svg path {
-  fill: #3A57E8;
-}
-
 .menu__image-ibg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -470,9 +469,17 @@ h6 {
     background-color: #C4CCF8;
   }
 
+  .menu__link:hover .menu__image-ibg svg path {
+    fill: #3A57E8;
+  }
+
   .menu__link:hover._active {
     color: #fff;
     background-color: #04134E;
+  }
+
+  .menu__link:hover._active .menu__image-ibg svg path {
+    fill: #fff;
   }
 
   .icon-aside-menu:hover {
