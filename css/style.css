@@ -241,7 +241,7 @@ h6 {
 }
 
 .menu-open .aside-menu._asideMenu-show .menu__header {
-  max-width: 12.5rem;
+  max-width: 23.75rem;
 }
 
 .aside-menu::after {
@@ -331,7 +331,7 @@ h6 {
 }
 
 .menu-open .menu__header {
-  max-width: 12.5rem;
+  max-width: 23.75rem;
 }
 
 .menu__logo-ibg {
