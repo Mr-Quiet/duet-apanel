@@ -209,6 +209,9 @@ h6 {
   -webkit-transition: max-width 0.3s ease 0s;
   -o-transition: max-width 0.3s ease 0s;
   transition: max-width 0.3s ease 0s;
+}
+
+.aside-menu._asideMenu-scroll {
   max-width: 4.5625rem;
 }
 
@@ -351,7 +354,7 @@ h6 {
 }
 
 .menu__logo-ibg span {
-  padding-left: 3.75rem;
+  padding-left: 3.9375rem;
 }
 
 .menu__body {
@@ -446,7 +449,9 @@ h6 {
   -webkit-transform: translate(50%, 0) scale(1, 1);
       -ms-transform: translate(50%, 0) scale(1, 1);
           transform: translate(50%, 0) scale(1, 1);
-  background-color: #3A57E8;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  background-color: #04134E;
   border-radius: 50%;
   width: 1.875rem;
   height: 1.875rem;
@@ -495,9 +500,11 @@ h6 {
 }
 
 .menu-open .icon-aside-menu {
+  background: rgba(4, 19, 78, 0.25);
   -webkit-transform: translate(50%, 0) scale(-1, 1);
       -ms-transform: translate(50%, 0) scale(-1, 1);
           transform: translate(50%, 0) scale(-1, 1);
+  opacity: 0.75;
 }
 
 @media (any-hover: hover) {
@@ -520,6 +527,6 @@ h6 {
   }
 
   .icon-aside-menu:hover {
-    background-color: #1938d6;
+    background-color: #C4CCF8;
   }
 }

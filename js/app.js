@@ -69,11 +69,12 @@
         const startPoint = asideMenu.dataset.scroll ? asideMenu.dataset.scroll : 0;
         let scrollDirection = 0;
         let timer;
+        !asideMenu.classList.contains("_asideMenu-scroll") ? asideMenu.classList.add("_asideMenu-scroll") : null;
+        !asideMenu.classList.contains("_asideMenu-show") ? asideMenu.classList.add("_asideMenu-show") : null;
         document.addEventListener("windowScroll", (function(e) {
             const scrollTop = window.scrollY;
             clearTimeout(timer);
             if (scrollTop >= startPoint) {
-                !asideMenu.classList.contains("_asideMenu-scroll") ? asideMenu.classList.add("_asideMenu-scroll") : null;
                 if (asideMenuShow) {
                     asideMenu.classList.contains("_asideMenu-show") ? asideMenu.classList.remove("_asideMenu-show") : null;
                     timer = setTimeout((() => {
@@ -199,6 +200,7 @@
             if (activeLink) activeLink.classList.remove("_active");
             if (!target.classList.contains("_active")) target.classList.add("_active");
         }
+        if (target.closest(".aside-main__icon")) ;
     }));
     window["FLS"] = true;
     isWebp();
