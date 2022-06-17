@@ -209,7 +209,7 @@ h6 {
   -webkit-transition: max-width 0.3s ease 0s;
   -o-transition: max-width 0.3s ease 0s;
   transition: max-width 0.3s ease 0s;
-  max-width: 4.375rem;
+  max-width: 4.5625rem;
 }
 
 .aside-menu._asideMenu-scroll .icon-aside-menu {
@@ -223,7 +223,11 @@ h6 {
 }
 
 .aside-menu._asideMenu-scroll .menu__header {
-  max-width: 5rem;
+  max-width: 4.5625rem;
+}
+
+.aside-menu._asideMenu-show {
+  max-width: 23.75rem;
 }
 
 .menu-open .aside-menu._asideMenu-show .icon-aside-menu {
@@ -237,7 +241,7 @@ h6 {
 }
 
 .menu-open .aside-menu._asideMenu-show .menu__header {
-  max-width: 23.75rem;
+  max-width: 12.5rem;
 }
 
 .aside-menu::after {
@@ -270,6 +274,22 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  direction: rtl;
+}
+
+.aside-menu__body::-webkit-scrollbar {
+  width: 3px;
+  background-color: #E9ECEF;
+}
+
+.aside-menu__body::-webkit-scrollbar-thumb {
+  background-color: #3A57E8;
+}
+
+.aside-menu__body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: #E9ECEF;
 }
 
 .aside-menu__menu {
@@ -285,6 +305,7 @@ h6 {
 .menu {
   position: relative;
   z-index: 10;
+  direction: ltr;
 }
 
 .menu__header {
@@ -310,7 +331,7 @@ h6 {
 }
 
 .menu-open .menu__header {
-  max-width: 23.75rem;
+  max-width: 12.5rem;
 }
 
 .menu__logo-ibg {
