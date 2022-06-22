@@ -13,6 +13,37 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
+    function fullVHfix() {
+        const fullScreens = document.querySelectorAll("[data-fullscreen]");
+        if (fullScreens.length && isMobile.any()) {
+            window.addEventListener("resize", fixHeight);
+            function fixHeight() {
+                let vh = .01 * window.innerHeight;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+            }
+            fixHeight();
+        }
+    }
     let bodyLockStatus = true;
     let bodyLockToggle = (delay = 500) => {
         if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
@@ -3249,5 +3280,6 @@
     window["FLS"] = true;
     isWebp();
     menuInit();
+    fullVHfix();
     asideScroll();
 })();
