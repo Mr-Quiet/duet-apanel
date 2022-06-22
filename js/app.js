@@ -3234,6 +3234,7 @@
             if (cards) {
                 const dir = target.previousElementSibling.innerHTML;
                 cards.insertAdjacentHTML("afterbegin", `\n\t\t\t<article class="card-chapter">\n\t\t\t\t<div class="card-chapter__header header-card">\n\t\t\t\t\t<p class="header-card__dir">Dashboard plan <span class="_icon-arrow-down"></span> ${dir}</p>\n\t\t\t\t\t<button class="header-card__button" type="submit"><span></span></button>\n\t\t\t\t</div>\n\t\t\t\t<form class="card-chapter__form form-card" action="#">\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<input id="name" class="form-card__input" type="text" autocomplete="off" value="Edit name" name="form[]">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<textarea id="desc" class="form-card__input" type="text" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t<div class="card-chapter__control control-card">\n\t\t\t\t\t<button class="control-card__button control-card__button_name _icon-edit-name" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_desc _icon-edit-desc" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_delete _icon-delete" type="submit"></button>\n\t\t\t\t</div>\n\t\t\t</article>\n\t\t\t`);
+                swiperUpdate(".university__slider");
             }
         }
     }));
