@@ -3235,39 +3235,14 @@
         const target = e.target;
         if (target.closest(".menu__link")) {
             e.preventDefault();
-            const activeLink = document.querySelector(".menu__link._active");
-            if (activeLink) activeLink.classList.remove("_active");
-            if (!target.classList.contains("_active")) target.classList.add("_active");
+            toogleActiveLink(target);
         }
         if (target.closest(".form-card__input")) {
             removeFocuseInput();
             target.parentElement.classList.add("_focus");
         }
-        if (target.closest(".control-card__button")) {
-            const form = target.parentElement.previousElementSibling;
-            removeFocuseInput();
-            if (target.closest(".control-card__button_name")) {
-                form.children[0].classList.add("_focus");
-                form.children[0].children[0].focus();
-            } else if (target.closest(".control-card__button_desc")) {
-                form.children[1].classList.add("_focus");
-                form.children[1].children[0].focus();
-            } else if (target.closest(".control-card__button_delete")) {
-                form.parentElement.classList.add("_delete");
-                setTimeout((() => {
-                    form.parentElement.remove();
-                    swiperUpdate(".university__slider");
-                }), 500);
-            }
-        }
-        if (target.closest(".chapter__button")) {
-            const cards = target.nextElementSibling;
-            if (cards) {
-                const dir = target.previousElementSibling.innerHTML;
-                cards.insertAdjacentHTML("afterbegin", `\n\t\t\t<article class="card-chapter">\n\t\t\t\t<div class="card-chapter__header header-card">\n\t\t\t\t\t<p class="header-card__dir">Dashboard plan <span class="_icon-arrow-down"></span> ${dir}</p>\n\t\t\t\t\t<button class="header-card__button" type="submit"><span></span></button>\n\t\t\t\t</div>\n\t\t\t\t<form class="card-chapter__form form-card" action="#">\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<input id="name" class="form-card__input" type="text" autocomplete="off" value="Edit name" name="form[]">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<textarea id="desc" class="form-card__input" type="text" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t<div class="card-chapter__control control-card">\n\t\t\t\t\t<button class="control-card__button control-card__button_name _icon-edit-name" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_desc _icon-edit-desc" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_delete _icon-delete" type="submit"></button>\n\t\t\t\t</div>\n\t\t\t</article>\n\t\t\t`);
-                swiperUpdate(".university__slider");
-            }
-        }
+        if (target.closest(".control-card__button")) removeCard(target);
+        if (target.closest(".chapter__button")) addCard(target);
     }));
     function removeFocuseInput() {
         const focusInput = document.querySelector(".form-card__item._focus");
@@ -3276,6 +3251,40 @@
     function swiperUpdate(selector) {
         const swiper = document.querySelector(selector).swiper;
         swiper.update();
+    }
+    function addCard(target) {
+        const cards = target.nextElementSibling;
+        if (cards) {
+            const dir = target.previousElementSibling.innerHTML;
+            cards.insertAdjacentHTML("afterbegin", `\n\t\t\t<article class="card-chapter _delete">\n\t\t\t\t<div class="card-chapter__header header-card">\n\t\t\t\t\t<p class="header-card__dir">Dashboard plan <span class="_icon-arrow-down"></span> ${dir}</p>\n\t\t\t\t\t<button class="header-card__button" type="submit"><span></span></button>\n\t\t\t\t</div>\n\t\t\t\t<form class="card-chapter__form form-card" action="#">\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<input id="name" class="form-card__input" type="text" autocomplete="off" value="Edit name" name="form[]">\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<textarea id="desc" class="form-card__input" type="text" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t\t<div class="card-chapter__control control-card">\n\t\t\t\t\t<button class="control-card__button control-card__button_name _icon-edit-name" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_desc _icon-edit-desc" type="submit"></button>\n\t\t\t\t\t<button class="control-card__button control-card__button_delete _icon-delete" type="submit"></button>\n\t\t\t\t</div>\n\t\t\t</article>\n\t\t\t`);
+            setTimeout((() => {
+                const deleteClass = document.querySelector(".card-chapter._delete");
+                if (deleteClass) deleteClass.classList.remove("_delete");
+            }), 200);
+            swiperUpdate(".university__slider");
+        }
+    }
+    function removeCard(target) {
+        const form = target.parentElement.previousElementSibling;
+        removeFocuseInput();
+        if (target.closest(".control-card__button_name")) {
+            form.children[0].classList.add("_focus");
+            form.children[0].children[0].focus();
+        } else if (target.closest(".control-card__button_desc")) {
+            form.children[1].classList.add("_focus");
+            form.children[1].children[0].focus();
+        } else if (target.closest(".control-card__button_delete")) {
+            form.parentElement.classList.add("_delete");
+            setTimeout((() => {
+                form.parentElement.remove();
+                swiperUpdate(".university__slider");
+            }), 400);
+        }
+    }
+    function toogleActiveLink(target) {
+        const activeLink = document.querySelector(".menu__link._active");
+        if (activeLink) activeLink.classList.remove("_active");
+        if (!target.classList.contains("_active")) target.classList.add("_active");
     }
     window["FLS"] = true;
     isWebp();
