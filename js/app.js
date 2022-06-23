@@ -3240,7 +3240,7 @@
         if (target.closest(".form-card__input")) {
             removeFocuseInput();
             target.parentElement.classList.add("_focus");
-        }
+        } else removeFocuseInput();
         if (target.closest(".control-card__button")) removeCard(target);
         if (target.closest(".chapter__button")) addCard(target);
     }));
