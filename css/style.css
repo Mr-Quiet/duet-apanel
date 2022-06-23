@@ -24,15 +24,15 @@
 }
 
 ._icon-delete:before {
-  content: "\e900";
-}
-
-._icon-edit-desc:before {
   content: "\e901";
 }
 
-._icon-edit-name:before {
+._icon-edit-desc:before {
   content: "\e902";
+}
+
+._icon-edit-title:before {
+  content: "\e904";
 }
 
 ._icon-arrow-down:before {
@@ -820,22 +820,23 @@ body {
           column-gap: 0.625rem;
 }
 
-.control-card__button_name::before {
-  font-size: 2.375rem;
+.control-card__button {
+  font-size: 1.875rem;
+}
+
+.control-card__button_title::before {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
 .control-card__button_desc::before {
-  font-size: 1.875rem;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
 .control-card__button_delete::before {
-  font-size: 1.875rem;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -927,7 +928,7 @@ body {
     background-color: #3A57E8;
   }
 
-  .control-card__button_name:hover::before {
+  .control-card__button_title:hover::before {
     color: #3A57E8;
   }
 
