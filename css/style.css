@@ -702,6 +702,11 @@ body {
 }
 
 .header-card__button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   display: inline-block;
   position: relative;
   width: 1.25rem;
@@ -733,11 +738,11 @@ body {
 }
 
 .header-card__button::after {
-  left: 50%;
+  left: 100%;
 }
 
 .header-card__button span {
-  left: 100%;
+  left: 50%;
 }
 
 .form-card {
