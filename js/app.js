@@ -5369,7 +5369,6 @@
         if (target.closest(".control-card__button")) removeCard(target);
         if (target.closest(".chapter__button")) addCard(target);
         if (target.closest(".tippy-buttons__button")) ;
-        console.log(target);
     }));
     function removeFocuseInput() {
         const focusInput = document.querySelector(".form-card__item._focus");
