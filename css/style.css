@@ -790,10 +790,16 @@ body {
 
 .form-card__item._focus .form-card__button {
   visibility: visible;
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
 }
 
 .form-card__item._focus .form-card__button_copy {
   visibility: hidden;
+  -webkit-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
 }
 
 .form-card__input {
@@ -838,13 +844,15 @@ body {
   width: 1.875rem;
   height: 1.875rem;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
   right: 0.3125rem;
-  -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 
 .form-card__button::before {
@@ -853,6 +861,9 @@ body {
 
 .form-card__button_copy {
   visibility: visible;
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
   color: #EEEEEE;
 }
 
