@@ -3252,7 +3252,7 @@
         }
     }));
     function copyLink(target) {
-        const copyLink = document.querySelector(".form-card__input_link");
+        const copyLink = target.previousElementSibling.previousElementSibling;
         target.parentElement.classList.add("_focus");
         copyLink.select();
         document.execCommand("copy");
