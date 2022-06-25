@@ -834,6 +834,7 @@ body {
 }
 
 .form-card__input_link {
+  color: #0081A7;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
 }
