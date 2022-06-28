@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220625202258">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220628151807">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<header class="header">
-		<div class="header__container menu-main">
+		<div class="menu-main">
 			<div class="menu-main__body">
 				<!-- <button type="submit" class="menu-main__language language-menu"><div class="language-menu__image-ibg"><img src="img/header/language/english.svg" alt=""></div></button> -->
 				<div class="menu-main__image-ibg"><img src="img/header/login/login.svg" alt=""></div>
@@ -116,14 +116,37 @@
 
 						<div class="university__slide swiper-slide">
 							<div class="university__chapter chapter">
-								<h2 class="chapter__title">Факультети</h2>
+								<div class="chapter__header header-fillter">
+									<div class="header-fillter__row">
+										<h2 class="header-fillter__title">Факультети</h2>
+										<button type="submit" class="header-fillter__button _icon-search"></button>
+									</div>
+									<div class="header-fillter__row">
+										<!-- <input class="header-fillter__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Enter text..."> -->
+										<div class="header-fillter__item">
+											<input class="header-fillter__input" autocomplete="off" type="text" placeholder="Enter text..." name="form[]">
+											<!-- <button type="submit" class="header-fillter__button _icon-done"></button> -->
+										</div>
+										<button type="submit" class="header-fillter__button header-fillter__button_sort _icon-sort"></button>
+									</div>
+									<div class="header-fillter__row header-fillter__row_flex-start">
+										<label class="header-fillter__label">Fillter by:</label>
+										<div class="header-fillter__select">
+											<select name="form[]">
+												<option value="1" selected>All</option>
+												<option value="2">Name</option>
+												<option value="3">Description</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<button type="submit" class="chapter__button">Додати</button>
 								<div class="chapter__card">
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Факультети</h4>
 											<!-- <button class="header-card__button" type="submit"><span></span></button> -->
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -151,7 +174,7 @@
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Факультети</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -176,14 +199,35 @@
 
 						<div class="university__slide swiper-slide">
 							<div class="university__chapter chapter">
-								<h2 class="chapter__title">Освітні ступені</h2>
+								<div class="chapter__header header-fillter">
+									<div class="header-fillter__row">
+										<h2 class="header-fillter__title">Освітні ступені</h2>
+										<button type="submit" class="header-fillter__button _icon-search"></button>
+									</div>
+									<div class="header-fillter__row">
+										<div class="header-fillter__item">
+											<input class="header-fillter__input" autocomplete="off" type="text" placeholder="Enter text..." name="form[]">
+										</div>
+										<button type="submit" class="header-fillter__button header-fillter__button_sort _icon-sort"></button>
+									</div>
+									<div class="header-fillter__row header-fillter__row_flex-start">
+										<label class="header-fillter__label">Fillter by:</label>
+										<div class="header-fillter__select">
+											<select name="form[]">
+												<option value="1" selected>All</option>
+												<option value="2">Name</option>
+												<option value="3">Description</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<button type="submit" class="chapter__button">Додати</button>
 								<div class="chapter__card">
 
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Освітні ступені</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -206,7 +250,7 @@
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Освітні ступені</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -228,7 +272,7 @@
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Освітні ступені</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -253,14 +297,35 @@
 
 						<div class="university__slide swiper-slide">
 							<div class="university__chapter chapter">
-								<h2 class="chapter__title">Структурні підрозділи</h2>
+								<div class="chapter__header header-fillter">
+									<div class="header-fillter__row">
+										<h2 class="header-fillter__title">Структурні підрозділи</h2>
+										<button type="submit" class="header-fillter__button _icon-search"></button>
+									</div>
+									<div class="header-fillter__row">
+										<div class="header-fillter__item">
+											<input class="header-fillter__input" autocomplete="off" type="text" placeholder="Enter text..." name="form[]">
+										</div>
+										<button type="submit" class="header-fillter__button header-fillter__button_sort _icon-sort"></button>
+									</div>
+									<div class="header-fillter__row header-fillter__row_flex-start">
+										<label class="header-fillter__label">Fillter by:</label>
+										<div class="header-fillter__select">
+											<select name="form[]">
+												<option value="1" selected>All</option>
+												<option value="2">Name</option>
+												<option value="3">Description</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<button type="submit" class="chapter__button">Додати</button>
 								<div class="chapter__card">
 
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Структурні підрозділи</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -282,7 +347,7 @@
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Структурні підрозділи</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -304,7 +369,7 @@
 									<form action="" class="card-chapter">
 										<div class="card-chapter__header header-card">
 											<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span> Структурні підрозділи</h4>
-											<button class="header-card__button _icon-delete" type="submit"></button>
+											<button class="header-card__button _icon-delete" type="reset"></button>
 										</div>
 										<div class="card-chapter__form form-card">
 											<div class="form-card__item">
@@ -329,7 +394,28 @@
 
 						<div class="university__slide swiper-slide">
 							<div class="university__chapter chapter">
-								<h2 class="chapter__title">Ще шось</h2>
+								<div class="chapter__header header-fillter">
+									<div class="header-fillter__row">
+										<h2 class="header-fillter__title">Ще шось</h2>
+										<button type="submit" class="header-fillter__button _icon-search"></button>
+									</div>
+									<div class="header-fillter__row">
+										<div class="header-fillter__item">
+											<input class="header-fillter__input" autocomplete="off" type="text" placeholder="Enter text..." name="form[]">
+										</div>
+										<button type="submit" class="header-fillter__button header-fillter__button_sort _icon-sort"></button>
+									</div>
+									<div class="header-fillter__row header-fillter__row_flex-start">
+										<label class="header-fillter__label">Fillter by:</label>
+										<div class="header-fillter__select">
+											<select name="form[]">
+												<option value="1" selected>All</option>
+												<option value="2">Name</option>
+												<option value="3">Description</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<button type="submit" class="chapter__button">Додати</button>
 								<div class="chapter__card">
 
@@ -358,7 +444,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220625202258"></script>
+	<script src="js/app.min.js?_v=20220628151807"></script>
 </body>
 
 </html>
