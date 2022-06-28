@@ -810,13 +810,14 @@ body {
   row-gap: 1.25rem;
   max-height: 3.875rem;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 
 .header-fillter._visibility {
   max-height: 10.3125rem;
+  overflow: visible;
 }
 
 .header-fillter__row {

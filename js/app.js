@@ -3685,7 +3685,6 @@
     };
     const da = new DynamicAdapt("max");
     da.init();
-    let searchClick = 0;
     window.addEventListener("load", mainFunc);
     function mainFunc() {
         document.addEventListener("click", (function(e) {
@@ -3709,21 +3708,9 @@
                 copyLink(target);
             }
             if (target.closest(".header-fillter__input")) target.parentElement.classList.add("_focus");
-            if (target.closest(".header-fillter__button_search")) toggleVisibleFilter(target);
+            if (target.closest(".header-fillter__button_search")) target.parentElement.parentElement.classList.toggle("_visibility");
             if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
         }));
-    }
-    function toggleVisibleFilter(target) {
-        target.parentElement.parentElement.classList.toggle("_visibility");
-        if (searchClick) {
-            target.parentElement.parentElement.style = "overflow: hidden;";
-            searchClick = 0;
-        } else {
-            searchClick++;
-            setTimeout((() => {
-                if (searchClick) target.parentElement.parentElement.style = "overflow: visible;";
-            }), 300);
-        }
     }
     function copyLink(target) {
         const copyLink = target.previousElementSibling.previousElementSibling;
