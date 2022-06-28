@@ -3710,9 +3710,9 @@
             }
             if (target.closest(".header-fillter__input")) target.parentElement.classList.add("_focus");
             if (target.closest(".header-fillter__button")) {
-                const input = document.querySelector(".header-fillter__input");
+                document.querySelector(".header-fillter__input");
                 target.parentElement.nextElementSibling.children[0].classList.add("_focus");
-                input.focus();
+                target.parentElement.nextElementSibling.children[0].children[0].focus();
             }
             if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
         }));
