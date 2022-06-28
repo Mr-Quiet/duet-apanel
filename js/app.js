@@ -3701,7 +3701,6 @@
             if (target.closest(".header-card__button")) {
                 e.preventDefault();
                 removeCard(target);
-                console.log("enter");
             }
             if (target.closest(".chapter__button")) addCard(target);
             if (target.closest(".form-card__button_copy")) {
@@ -3710,7 +3709,6 @@
             }
             if (target.closest(".header-fillter__input")) target.parentElement.classList.add("_focus");
             if (target.closest(".header-fillter__button_search")) {
-                document.querySelector(".header-fillter__input");
                 target.parentElement.nextElementSibling.children[0].classList.add("_focus");
                 target.parentElement.nextElementSibling.children[0].children[0].focus();
             }
