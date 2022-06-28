@@ -830,6 +830,11 @@ body {
           justify-content: flex-start;
 }
 
+.header-fillter__button_search::before {
+  font-size: 1.4375rem;
+  color: #0081A7;
+}
+
 .header-fillter__button_sort {
   border-radius: 4px;
   padding: 7px;
