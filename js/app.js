@@ -3714,10 +3714,7 @@
                 target.parentElement.nextElementSibling.children[0].classList.add("_focus");
                 target.parentElement.nextElementSibling.children[0].children[0].focus();
             }
-            if (target.closest(".header-fillter__button_sort")) {
-                target.classList.toggle("_active");
-                console.log(target);
-            }
+            if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
         }));
     }
     function copyLink(target) {
