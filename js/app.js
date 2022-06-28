@@ -3709,12 +3709,15 @@
                 copyLink(target);
             }
             if (target.closest(".header-fillter__input")) target.parentElement.classList.add("_focus");
-            if (target.closest(".header-fillter__button")) {
+            if (target.closest(".header-fillter__button_search")) {
                 document.querySelector(".header-fillter__input");
                 target.parentElement.nextElementSibling.children[0].classList.add("_focus");
                 target.parentElement.nextElementSibling.children[0].children[0].focus();
             }
-            if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
+            if (target.closest(".header-fillter__button_sort")) {
+                target.classList.toggle("_active");
+                console.log(target);
+            }
         }));
     }
     function copyLink(target) {
