@@ -1480,21 +1480,10 @@ body {
 }
 
 ._table .card-specialties {
+  padding: 0 !important;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-@supports (padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-  ._table .card-specialties {
-    padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem );
-  }
-}
-
-@supports not (padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
-  ._table .card-specialties {
-    padding: calc(0.0000000625rem + 0 * (100vw - 30rem) / 18);
-  }
 }
 
 ._table .card-specialties_header {
