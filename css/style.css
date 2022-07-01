@@ -905,6 +905,25 @@ body {
   display: -ms-grid;
   display: grid;
   gap: 0.9375rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+._asideMenu-scroll .menu__items {
+  padding-top: 15px;
+}
+
+.menu-open ._asideMenu-show .menu__items {
+  padding-top: 80px;
+}
+
+.menu-open ._asideMenu-show .menu__items_form {
+  padding-top: 60px;
+}
+
+.menu__items_padding {
+  padding-top: 15px !important;
 }
 
 .menu__items::before {
@@ -926,12 +945,16 @@ body {
 }
 
 .menu__title {
-  display: none;
-  position: relative;
   font-weight: 600;
-  line-height: 175%;
+  line-height: 125%;
   color: #ADB5BD;
-  white-space: nowrap;
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  right: -200%;
+  -webkit-transition: right 0.3s ease 0s;
+  -o-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
 }
 
 .menu__title:not(:last-child) {
@@ -939,11 +962,11 @@ body {
 }
 
 ._asideMenu-scroll .menu__title {
-  display: none;
+  right: -200%;
 }
 
 .menu-open ._asideMenu-show .menu__title {
-  display: block;
+  right: 0;
 }
 
 .menu__link {
