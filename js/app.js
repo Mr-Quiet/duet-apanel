@@ -3696,7 +3696,10 @@
             if (target.closest(".form-card__input")) {
                 e.preventDefault();
                 removeFocuseInput();
-                target.parentElement.classList.add("_focus");
+                if (target.parentElement.classList.contains("form-card__item")) {
+                    console.log(1);
+                    target.parentElement.classList.add("_focus");
+                }
             } else removeFocuseInput();
             if (target.closest(".header-card__button")) {
                 e.preventDefault();
@@ -3711,6 +3714,26 @@
             if (target.closest(".header-fillter__button_search")) target.parentElement.parentElement.classList.toggle("_visibility");
             if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
         }));
+        document.addEventListener("change", (function(e) {
+            toggleCartToTable();
+        }));
+        toggleCartToTable();
+    }
+    function toggleCartToTable() {
+        const switchTable = document.querySelector(".switch-visibility__label_table");
+        const switchGrid = document.querySelector(".switch-visibility__label_grid");
+        const tableInput = document.querySelector("#table");
+        if (tableInput.checked) {
+            document.documentElement.classList.add("_table");
+            if (!switchTable.classList.contains("_active")) {
+                switchGrid.classList.remove("_active");
+                switchTable.classList.add("_active");
+            }
+        } else if (tableInput) {
+            document.documentElement.classList.remove("_table");
+            switchTable.classList.remove("_active");
+            switchGrid.classList.add("_active");
+        }
     }
     function copyLink(target) {
         const copyLink = target.previousElementSibling.previousElementSibling;
@@ -3741,12 +3764,21 @@
         }
     }
     function removeCard(target) {
-        const card = target.parentElement.parentElement;
-        card.classList.add("_delete");
-        setTimeout((() => {
-            card.remove();
-            swiperUpdate(".university__slider");
-        }), 400);
+        if (target.parentElement.parentElement.parentElement.classList.contains("specialties__body")) {
+            const card = target.parentElement.parentElement.parentElement;
+            target.parentElement.parentElement.classList.add("_delete");
+            setTimeout((() => {
+                card.remove();
+                if (document.querySelector(".university__slider")) swiperUpdate(".university__slider");
+            }), 400);
+        } else {
+            const card = target.parentElement.parentElement;
+            card.classList.add("_delete");
+            setTimeout((() => {
+                card.remove();
+                if (document.querySelector(".university__slider")) swiperUpdate(".university__slider");
+            }), 400);
+        }
     }
     function toogleActiveLink(target) {
         const activeLink = document.querySelector(".menu__link._active");

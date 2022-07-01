@@ -48,6 +48,14 @@
   content: "\e905";
 }
 
+._icon-grid:before {
+  content: "\e906";
+}
+
+._icon-table:before {
+  content: "\e907";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -322,6 +330,335 @@ body {
      object-fit: contain;
 }
 
+.form-card {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1rem;
+}
+
+._table .form-card {
+  -ms-grid-columns: 40px 200px 350px 150px;
+  grid-template-columns: 40px 200px 350px 150px;
+}
+
+.form-card__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+}
+
+._table .form-card__items {
+  padding: 0.625rem;
+  border-bottom: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+
+._table .form-card__items_color {
+  background-color: #F5F5F5;
+}
+
+._table .form-card__items:first-child {
+  border-left: none;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-card__items_number {
+  display: none;
+}
+
+._table .form-card__items_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F5F5F5;
+}
+
+.form-card__item {
+  position: relative;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  width: 100%;
+}
+
+.form-card__item_max-width {
+  max-width: 6.25rem;
+}
+
+._table .form-card__item_max-width {
+  max-width: none;
+}
+
+.form-card__item::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #0081A7;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.form-card__item._focus {
+  background-color: #EEEEEE;
+}
+
+.form-card__item._focus::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.form-card__item._focus .form-card__button {
+  visibility: visible;
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+}
+
+.form-card__item._focus .form-card__button_copy {
+  visibility: hidden;
+  -webkit-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+}
+
+.form-card__input {
+  background-color: transparent;
+  padding: 0.3125rem 0.625rem;
+  padding-right: 2.5rem;
+  border-radius: 0 !important;
+  width: 100%;
+}
+
+.form-card__input:focus {
+  outline: none;
+}
+
+.form-card__input_desc {
+  resize: none;
+}
+
+._table .form-card__input_desc {
+  max-height: 3.125rem;
+}
+
+.form-card__input_desc::-webkit-scrollbar {
+  width: 3px;
+  background-color: #E9ECEF;
+}
+
+.form-card__input_desc::-webkit-scrollbar-thumb {
+  background-color: #3A57E8;
+}
+
+.form-card__input_desc::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: #E9ECEF;
+}
+
+.form-card__input_link {
+  color: #0081A7;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.form-card__button {
+  background-color: transparent;
+  visibility: hidden;
+  position: absolute;
+  width: 1.875rem;
+  height: 1.875rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0);
+      -ms-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
+  right: 0.3125rem;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: color 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.form-card__button::before {
+  font-size: 1.125rem;
+}
+
+._table .form-card__label {
+  display: none;
+}
+
+.form-card_copy {
+  visibility: visible;
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
+  color: #EEEEEE;
+}
+
+.header-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+}
+
+.header-card__dir {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 0.75rem;
+  line-height: 125%;
+  color: #717171;
+}
+
+.header-card__dir span::before {
+  font-size: 0.625rem;
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.header-card__button {
+  padding: 0.4375rem;
+  background-color: #E9ECEF;
+  font-size: 1.125rem;
+  border-radius: 0.25rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.header-card__button::before {
+  color: #717171;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.controlls-specialties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2.5rem;
+     -moz-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+  row-gap: 1.25rem;
+  min-height: 3.75rem;
+}
+
+.controlls-specialties__button {
+  background-color: #04134E;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+  padding: 0.9375rem;
+  padding-left: 3.75rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.controlls-specialties__button::before,
+.controlls-specialties__button::after {
+  content: "";
+  position: absolute;
+  width: 1.5625rem;
+  height: 0.375rem;
+  top: 50%;
+  left: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.controlls-specialties__button::before {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  opacity: 0.4;
+}
+
+.controlls-specialties__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.input-fillter {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.input-fillter__input {
+  padding: 1.25rem;
+  padding-right: 5rem;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #E9ECEF;
+}
+
+.input-fillter__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 2px #0081A7;
+          box-shadow: 0 0 2px #0081A7;
+}
+
+.input-fillter__button {
+  position: absolute;
+  width: 3.75rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #0081A7;
+  border-radius: 0px 4px 4px 0px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  -o-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.input-fillter__button::before {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
 .header {
   padding: 0.9375rem 0;
   background-color: #fff;
@@ -589,13 +926,24 @@ body {
 }
 
 .menu__title {
+  display: none;
+  position: relative;
   font-weight: 600;
   line-height: 175%;
   color: #ADB5BD;
+  white-space: nowrap;
 }
 
 .menu__title:not(:last-child) {
   margin-bottom: 0.625em;
+}
+
+._asideMenu-scroll .menu__title {
+  display: none;
+}
+
+.menu-open ._asideMenu-show .menu__title {
+  display: block;
 }
 
 .menu__link {
@@ -711,7 +1059,7 @@ body {
 }
 
 .page {
-  padding-left: 5rem;
+  padding-left: 5.1875rem;
   padding-top: 4.6875rem;
   position: relative;
 }
@@ -786,20 +1134,20 @@ body {
           transform: rotate(90deg);
 }
 
-.chapter__card {
+.chapter__cards {
   overflow: hidden;
   display: -ms-grid;
   display: grid;
 }
 
 @supports (row-gap: clamp( 1.25rem , 0.2083333333rem  +  3.4722222222vw , 1.875rem )) {
-  .chapter__card {
+  .chapter__cards {
     row-gap: clamp( 1.25rem , 0.2083333333rem  +  3.4722222222vw , 1.875rem );
   }
 }
 
 @supports not (row-gap: clamp( 1.25rem , 0.2083333333rem  +  3.4722222222vw , 1.875rem )) {
-  .chapter__card {
+  .chapter__cards {
     row-gap: calc(1.25rem + 0.625 * (100vw - 30rem) / 18);
   }
 }
@@ -963,181 +1311,6 @@ body {
           transform: translateX(-105%);
 }
 
-.header-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 0.9375rem;
-     -moz-column-gap: 0.9375rem;
-          column-gap: 0.9375rem;
-}
-
-.header-card__dir {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  font-size: 0.75rem;
-  line-height: 125%;
-  color: #717171;
-}
-
-.header-card__dir span::before {
-  font-size: 0.625rem;
-  display: inline-block;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.header-card__button {
-  padding: 0.4375rem;
-  background-color: #E9ECEF;
-  font-size: 1.125rem;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
-}
-
-.header-card__button::before {
-  color: #717171;
-  -webkit-transition: color 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
-}
-
-.form-card {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 1rem;
-}
-
-.form-card__item {
-  position: relative;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  -webkit-transition: background-color 0.3s ease 0s;
-  -o-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
-}
-
-.form-card__item::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 0.125rem;
-  background-color: #0081A7;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-
-.form-card__item._focus {
-  background-color: #EEEEEE;
-}
-
-.form-card__item._focus::before {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.form-card__item._focus .form-card__button {
-  visibility: visible;
-  -webkit-transform: translateY(-50%) scale(1);
-      -ms-transform: translateY(-50%) scale(1);
-          transform: translateY(-50%) scale(1);
-}
-
-.form-card__item._focus .form-card__button_copy {
-  visibility: hidden;
-  -webkit-transform: translateY(-50%) scale(0);
-      -ms-transform: translateY(-50%) scale(0);
-          transform: translateY(-50%) scale(0);
-}
-
-.form-card__input {
-  background-color: transparent;
-  padding: 0.3125rem 0.625rem;
-  padding-right: 2.5rem;
-  border-radius: 0 !important;
-  width: 100%;
-}
-
-.form-card__input:focus {
-  outline: none;
-}
-
-.form-card__input_desc {
-  resize: none;
-}
-
-.form-card__input_desc::-webkit-scrollbar {
-  width: 3px;
-  background-color: #E9ECEF;
-}
-
-.form-card__input_desc::-webkit-scrollbar-thumb {
-  background-color: #3A57E8;
-}
-
-.form-card__input_desc::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
-  background-color: #E9ECEF;
-}
-
-.form-card__input_link {
-  color: #0081A7;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-}
-
-.form-card__button {
-  background-color: transparent;
-  visibility: hidden;
-  position: absolute;
-  width: 1.875rem;
-  height: 1.875rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%) scale(0);
-      -ms-transform: translateY(-50%) scale(0);
-          transform: translateY(-50%) scale(0);
-  right: 0.3125rem;
-  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  -o-transition: color 0.3s ease 0s, transform 0.3s ease 0s;
-  transition: color 0.3s ease 0s, transform 0.3s ease 0s;
-  transition: color 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-}
-
-.form-card__button::before {
-  font-size: 1.125rem;
-}
-
-.form-card__button_copy {
-  visibility: visible;
-  -webkit-transform: translateY(-50%) scale(1);
-      -ms-transform: translateY(-50%) scale(1);
-          transform: translateY(-50%) scale(1);
-  color: #EEEEEE;
-}
-
 .control-card__button_title::before {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
@@ -1166,6 +1339,176 @@ body {
 
 .tippy-buttons__button:active {
   background-color: #3A57E8;
+}
+
+.specialties {
+  padding: 1.25rem 0.9375rem;
+  padding-bottom: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2.5rem;
+}
+
+@supports (font-size: clamp( 1.75rem , 1.1220095694rem  +  2.8708133971vw , 2.5rem )) {
+  .specialties__title {
+    font-size: clamp( 1.75rem , 1.1220095694rem  +  2.8708133971vw , 2.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.75rem , 1.1220095694rem  +  2.8708133971vw , 2.5rem )) {
+  .specialties__title {
+    font-size: calc(1.75rem + 0.75 * (100vw - 21.875rem) / 26.125);
+  }
+}
+
+.specialties__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+._table .specialties__cards {
+  background-color: #fff;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -webkit-box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+          box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  border-top: 5px solid #3A57E8;
+  border-bottom: none;
+}
+
+.specialties__body {
+  overflow: hidden;
+}
+
+._table .specialties__body {
+  overflow: visible;
+  min-width: 100%;
+  background-color: #F5F5F5;
+}
+
+.specialties__body_hidden {
+  display: none;
+}
+
+._table .specialties__body_hidden {
+  display: block;
+  font-weight: 600;
+}
+
+.switch-visibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+}
+
+.switch-visibility__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  background-color: #E9ECEF;
+  cursor: pointer;
+  height: 100%;
+  min-width: 3.75rem;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.switch-visibility__label::before {
+  font-size: 1.5625rem;
+  color: #717171;
+}
+
+.switch-visibility__label._active {
+  background-color: #0081A7;
+}
+
+.switch-visibility__label._active::before {
+  color: #fff;
+}
+
+.card-specialties {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+          box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+  border-radius: 0.5rem;
+}
+
+@supports (padding: clamp( 0.9375rem , 0.0000000625rem  +  3.125vw , 1.5rem )) {
+  .card-specialties {
+    padding: clamp( 0.9375rem , 0.0000000625rem  +  3.125vw , 1.5rem );
+  }
+}
+
+@supports not (padding: clamp( 0.9375rem , 0.0000000625rem  +  3.125vw , 1.5rem )) {
+  .card-specialties {
+    padding: calc(0.9375rem + 0.5625 * (100vw - 30rem) / 18);
+  }
+}
+
+._table .card-specialties {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@supports (padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
+  ._table .card-specialties {
+    padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem );
+  }
+}
+
+@supports not (padding: clamp( 0.0000000625rem , 0.0000000625rem  +  0vw , 0.0000000625rem )) {
+  ._table .card-specialties {
+    padding: calc(0.0000000625rem + 0 * (100vw - 30rem) / 18);
+  }
+}
+
+._table .card-specialties_header {
+  background-color: transparent;
+}
+
+._table .card-specialties__header {
+  display: none;
+}
+
+.card-specialties._delete {
+  -webkit-transform: translateX(-105%);
+      -ms-transform: translateX(-105%);
+          transform: translateX(-105%);
 }
 
 .swiper {
@@ -1211,7 +1554,40 @@ body {
   display: none !important;
 }
 
+@media (max-width: 83.125em) {
+  .specialties__cards {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 61.99875em) {
+  .specialties__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 47.99875em) {
+  .controlls-specialties {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .controlls-specialties__switch {
+    min-height: 3.75rem;
+  }
+
+  .controlls-specialties__input {
+    min-height: 3.75rem;
+  }
+
+  .controlls-specialties__button {
+    min-height: 3.75rem;
+  }
+
   .menu-main__image-ibg {
     display: none;
   }
@@ -1219,12 +1595,46 @@ body {
   .login-menu {
     display: none;
   }
+
+  .specialties {
+    row-gap: 1.25rem;
+  }
+
+  .specialties__cards {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.875rem;
+  }
 }
 
 @media (any-hover: hover) {
   .select__option:hover {
     background: #0081A7;
     color: #fff;
+  }
+
+  .form-card__button:hover {
+    color: green;
+  }
+
+  .form-card_copy:hover {
+    color: #717171;
+  }
+
+  .header-card__button:hover {
+    background-color: #971F1F;
+  }
+
+  .header-card__button:hover::before {
+    color: #fff;
+  }
+
+  .controlls-specialties__button:hover {
+    background-color: #0081A7;
+  }
+
+  .input-fillter__button:hover {
+    background-color: #0081A7;
   }
 
   .menu__link:hover {
@@ -1253,22 +1663,6 @@ body {
     background-color: #C4CCF8;
   }
 
-  .header-card__button:hover {
-    background-color: #971F1F;
-  }
-
-  .header-card__button:hover::before {
-    color: #fff;
-  }
-
-  .form-card__button:hover {
-    color: green;
-  }
-
-  .form-card__button_copy:hover {
-    color: #717171;
-  }
-
   .control-card__button_title:hover::before {
     color: #3A57E8;
   }
@@ -1279,6 +1673,14 @@ body {
 
   .tippy-buttons__button:hover {
     background-color: #0081A7;
+    color: #fff;
+  }
+
+  .switch-visibility__label:hover {
+    background-color: #aeb9c4;
+  }
+
+  .switch-visibility__label:hover::before {
     color: #fff;
   }
 }
