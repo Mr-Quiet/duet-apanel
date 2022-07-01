@@ -3783,6 +3783,7 @@
             target.parentElement.parentElement.classList.add("_delete");
             setTimeout((() => {
                 card.remove();
+                updateFormNumber();
                 if (document.querySelector(".university__slider")) swiperUpdate(".university__slider");
             }), 400);
         } else {
