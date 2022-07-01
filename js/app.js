@@ -3716,10 +3716,12 @@
             toggleCartToTable();
         }));
         toggleCartToTable();
+        updateFormNumber();
     }
     function addCardSpec(target) {
         target.parentElement.nextElementSibling.children[0].remove();
         target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t\t<div class="specialties__body specialties__body_hidden">\n\t\t\t<div class="specialties__card card-specialties card-specialties_header">\n\t\t\t\t<div class="card-specialties__form form-card">\n\t\t\t\t\t<div class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">1</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__short-name">Коротка назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__full-name">Повна назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__code">Код спеціальності</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-specialties _delete">\n\t\t\t\t<div class="card-specialties__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ${"Edit name"}</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-specialties__form form-card">\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Edit name" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit full name</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<label class="form-card__label">Код: </label>\n\t\t\t\t\t\t<div class="form-card__item form-card__item_max-width">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="000" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
+        updateFormNumber();
         setTimeout((() => {
             const deleteClass = document.querySelector(".card-specialties._delete");
             if (deleteClass) deleteClass.classList.remove("_delete");
@@ -3740,6 +3742,12 @@
             switchTable.classList.remove("_active");
             switchGrid.classList.add("_active");
         }
+    }
+    function updateFormNumber() {
+        const numbers = document.querySelectorAll(".form-card__number");
+        numbers.forEach(((number, i) => {
+            number.innerHTML = `${i + 1}`;
+        }));
     }
     function copyLink(target) {
         const copyLink = target.previousElementSibling.previousElementSibling;
