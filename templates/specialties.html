@@ -4,17 +4,17 @@
 		<h2 class="specialties__title">Спеціальності</h2>
 	</div>
 	<div class="specialties__controll controlls-specialties">
-		<button type="submit" class="controlls-specialties__button">Додати</button>
+		<button type="submit" class="controlls-specialties__button controlls-specialties__button_spec">Додати</button>
 		<div class="controlls-specialties__input input-fillter">
 			<input class="input-fillter__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ІПЗ, Інженерія програмного, 121">
 			<button class="input-fillter__button _icon-search" type="submit"></button>
 		</div>
 		<div class="controlls-specialties__switch switch-visibility">
-			<label class="switch-visibility__label switch-visibility__label_grid _icon-grid" for="grid">
+			<label class="switch-visibility__label switch-visibility__label_grid _icon-grid _active" for="grid">
 			</label>
 			<label class="switch-visibility__label switch-visibility__label_table _icon-table" for="table">
 			</label>
-			<input hidden type="radio" name="display" class="switch-visibility__grid" id="grid">
+			<input hidden type="radio" name="display" class="switch-visibility__grid" id="grid" checked>
 			<input hidden type="radio" name="display" class="switch-visibility__table" id="table">
 		</div>
 	</div>

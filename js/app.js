@@ -3685,6 +3685,88 @@
     };
     const da = new DynamicAdapt("max");
     da.init();
+    function AJAX(url, {type, method = "GET", body, answers, error, succes}) {
+        async function sendFetch() {
+            let query = window.fetch;
+            if ("POST" === method.toLocaleUpperCase() || "PUT" === method.toLocaleUpperCase() || "PATCH" === method.toLocaleUpperCase()) {
+                let form = new FormData;
+                form.append("data", JSON.stringify(body));
+                query = await query(url, {
+                    method: method.toLocaleUpperCase(),
+                    body: form
+                });
+            } else if ("DELETE" === method.toLocaleUpperCase()) query = await query(url, {
+                method
+            }); else query = await query(url);
+            answers({
+                status: query.status
+            });
+            if (query.ok) succes(await query.json()); else error(new Error("request failed"));
+        }
+        function XHR() {
+            let xhr;
+            let form = new FormData;
+            if (window.XMLHttpRequest) xhr = new XMLHttpRequest; else if (window.ActiveXObject) xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            if ("PUT" === method.toLocaleUpperCase() || "PATCH" === method.toLocaleUpperCase() || "POST" === method.toLocaleUpperCase()) form.append("data", JSON.stringify(body));
+            xhr.responseType = "json";
+            xhr.open(method.toLocaleUpperCase(), url);
+            xhr.onreadystatechange = () => {
+                answers({
+                    readyState: xhr.readyState,
+                    status: xhr.status,
+                    statusText: xhr.statusText
+                });
+                if (4 == xhr.readyState && xhr.status >= 200 && xhr.status <= 299) succes(xhr.response); else error(xhr.readyState);
+            };
+            xhr.send("object" === typeof body ? form : "string" === typeof body ? body : "");
+        }
+        return "fetch" === type && "function" === typeof window.fetch ? sendFetch() : XHR();
+    }
+    function renderHTML(menu, error, ajax) {
+        const state = {};
+        let aActive = menu.querySelector("a._active");
+        issetData();
+        function pageToggle(index) {
+            state.page = index;
+            history.pushState(state, "", window.location.href);
+            history.replaceState(state, "", window.location.href);
+            console.log(history);
+        }
+        function splitUrl(url) {
+            return url.match(/(?=[^\/])[A-z]+(?:\.((html)|php))/)[0];
+        }
+        function changeState() {
+            state.href = state.href ? state.href : window.location.href;
+            state.page = state.page ? splitUrl(state.page) : splitUrl(window.location.href);
+        }
+        function issetData() {
+            if (aActive.getAttribute("data-index") && aActive.dataset.index.length) {
+                changeState();
+                pageToggle(aActive.dataset.index);
+                query();
+            } else error(new Error("page undefined"));
+        }
+        function query() {
+            ajax("php-plugin/template.php", {
+                type: "fetch",
+                method: "post",
+                body: state.page,
+                answers: function(response) {
+                    console.log(response);
+                },
+                error: function(error) {
+                    console.error(error);
+                },
+                succes: function(succes) {
+                    insert(succes.content);
+                }
+            });
+        }
+        function insert(content) {
+            document.querySelector("main.page").innerHTML = "";
+            document.querySelector("main.page").insertAdjacentHTML("beforeend", content);
+        }
+    }
     window.addEventListener("load", mainFunc);
     function mainFunc() {
         document.addEventListener("click", (function(e) {
@@ -3692,6 +3774,9 @@
             if (target.closest(".menu__link")) {
                 e.preventDefault();
                 toogleActiveLink(target);
+                setTimeout((() => {
+                    modules_flsModules.select.selectsInit(document.querySelectorAll("select"));
+                }), 30);
             }
             if (target.closest(".form-card__input")) {
                 e.preventDefault();
@@ -3710,13 +3795,20 @@
             if (target.closest(".header-fillter__input")) target.parentElement.classList.add("_focus");
             if (target.closest(".header-fillter__button_search")) target.parentElement.parentElement.classList.toggle("_visibility");
             if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
-            if (target.closest(".controlls-specialties__button")) addCardSpec(target);
+            if (target.closest(".controlls-specialties__button")) {
+                if (target.classList.contains("controlls-specialties__button_spec")) addCardSpec(target);
+                if (target.classList.contains("controlls-specialties__button_dis")) addCardDis(target);
+                if (target.classList.contains("controlls-specialties__button_dod-opt")) addCardDodOpt(target);
+            }
         }));
         document.addEventListener("change", (function(e) {
             toggleCartToTable();
         }));
         toggleCartToTable();
         updateFormNumber();
+        renderHTML(document.querySelector(".menu"), (function(error) {
+            console.error(error);
+        }), AJAX);
     }
     function addCardSpec(target) {
         target.parentElement.nextElementSibling.children[0].remove();
@@ -3727,11 +3819,29 @@
             if (deleteClass) deleteClass.classList.remove("_delete");
         }), 200);
     }
+    function addCardDis(target) {
+        target.parentElement.nextElementSibling.children[0].remove();
+        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t\t<div class="specialties__body specialties__body_hidden">\n\t\t\t<div class="specialties__card card-specialties card-specialties_header">\n\t\t\t\t<div class="card-specialties__form form-card form-card_dis">\n\t\t\t\t\t<div class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">1</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__full-name">Повна назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__code">Шифр спеціальності</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-specialties _delete">\n\t\t\t\t<div class="card-specialties__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> 0000000000</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-specialties__form form-card form-card_dis">\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit title</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<label class="form-card__label">Шифр: </label>\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="0000000000" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
+        updateFormNumber();
+        setTimeout((() => {
+            const deleteClass = document.querySelector(".card-specialties._delete");
+            if (deleteClass) deleteClass.classList.remove("_delete");
+        }), 200);
+    }
+    function addCardDodOpt(target) {
+        target.parentElement.nextElementSibling.children[0].remove();
+        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t<div class="specialties__body specialties__body_hidden">\n\t\t\t<div class="specialties__card card-specialties card-specialties_header">\n\t\t\t\t<div class="card-specialties__form form-card form-card_dod-opt">\n\t\t\t\t\t<div class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">1</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__full-name">Назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__code">Коментар</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-specialties _delete">\n\t\t\t\t<div class="card-specialties__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Дод. освітні опції <span class="_icon-arrow-down"></span> Edit title</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-specialties__form form-card form-card_dod-opt">\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="Edit title" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
+        updateFormNumber();
+        setTimeout((() => {
+            const deleteClass = document.querySelector(".card-specialties._delete");
+            if (deleteClass) deleteClass.classList.remove("_delete");
+        }), 200);
+    }
     function toggleCartToTable() {
         const switchTable = document.querySelector(".switch-visibility__label_table");
         const switchGrid = document.querySelector(".switch-visibility__label_grid");
         const tableInput = document.querySelector("#table");
-        if (tableInput.checked) {
+        if (tableInput && tableInput.checked) {
             document.documentElement.classList.add("_table");
             if (!switchTable.classList.contains("_active")) {
                 switchGrid.classList.remove("_active");
@@ -3798,7 +3908,15 @@
     function toogleActiveLink(target) {
         const activeLink = document.querySelector(".menu__link._active");
         if (activeLink) activeLink.classList.remove("_active");
-        if (!target.classList.contains("_active")) target.classList.add("_active");
+        if (!target.classList.contains("_active")) {
+            target.classList.add("_active");
+            renderHTML(document.querySelector(".menu"), (function(error) {
+                console.error(error);
+            }), AJAX);
+        }
+        setTimeout((() => {
+            initSliders();
+        }), 50);
     }
     window["FLS"] = true;
     isWebp();
