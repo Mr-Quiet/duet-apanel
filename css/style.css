@@ -498,6 +498,10 @@ body {
      text-overflow: ellipsis;
 }
 
+._table .form-card__label {
+  display: none;
+}
+
 .form-card__button {
   background-color: transparent;
   visibility: hidden;
@@ -505,9 +509,9 @@ body {
   width: 1.875rem;
   height: 1.875rem;
   top: 50%;
-  -webkit-transform: translateY(-50%) scale(0);
-      -ms-transform: translateY(-50%) scale(0);
-          transform: translateY(-50%) scale(0);
+  -webkit-transform: translateY(-50%) scale(1);
+      -ms-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1);
   right: 0.3125rem;
   -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   transition: color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
@@ -520,15 +524,11 @@ body {
   font-size: 1.125rem;
 }
 
-._table .form-card__label {
-  display: none;
-}
-
-.form-card_copy {
+.form-card__button_copy {
   visibility: visible;
-  -webkit-transform: translateY(-50%) scale(1);
-      -ms-transform: translateY(-50%) scale(1);
-          transform: translateY(-50%) scale(1);
+  -webkit-transform: translateY(-50%) scale(1) !important;
+      -ms-transform: translateY(-50%) scale(1) !important;
+          transform: translateY(-50%) scale(1) !important;
   color: #EEEEEE;
 }
 
@@ -1537,6 +1537,138 @@ body {
           transform: translateX(-105%);
 }
 
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  -webkit-transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, -webkit-transform;
+  -o-transition-property: transform, visibility, opacity;
+  transition-property: transform, visibility, opacity;
+  transition-property: transform, visibility, opacity, -webkit-transform;
+}
+
+.tippy-box[data-placement^=top] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^=top] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^=left] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^=left] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.tippy-box[data-placement^=right] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^=right] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  -webkit-transform-origin: center right;
+      -ms-transform-origin: center right;
+          transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state=visible] {
+  -webkit-transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+       -o-transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+          transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #333;
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tippy-box[data-theme~=light] {
+  color: #26323d;
+  -webkit-box-shadow: 0 0 15px 4px rgba(181, 181, 181, 0.3137254902);
+          box-shadow: 0 0 15px 4px rgba(181, 181, 181, 0.3137254902);
+  background-color: white;
+}
+
+.tippy-box[data-theme~=light][data-placement^=top] > .tippy-arrow::before {
+  border-top-color: white;
+}
+
+.tippy-box[data-theme~=light][data-placement^=bottom] > .tippy-arrow::before {
+  border-bottom-color: white;
+}
+
+.tippy-box[data-theme~=light][data-placement^=left] > .tippy-arrow::before {
+  border-left-color: white;
+}
+
+.tippy-box[data-theme~=light][data-placement^=right] > .tippy-arrow::before {
+  border-right-color: white;
+}
+
+.tippy-box[data-theme~=light] > .tippy-backdrop {
+  background-color: white;
+}
+
+.tippy-box[data-theme~=light] > .tippy-svg-arrow {
+  fill: white;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -1643,7 +1775,7 @@ body {
     color: green;
   }
 
-  .form-card_copy:hover {
+  .form-card__button_copy:hover {
     color: #717171;
   }
 
