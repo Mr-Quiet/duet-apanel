@@ -2906,6 +2906,13 @@
             paramert();
         }
     }
+    const cards = {
+        osvLvl: `<div class="specialties__body">\n\t\t\t\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t\t\t\t<div class="card-chapter__form form-card form-card_university">\n\t\t\t\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t\t\t\t\t\t<h4 class="header-card__dir">Університет <span class="_icon-arrow-down"></span> ${"Освітні ступені"}</h4>\n\t\t\t\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="Edit name" name="form[]">\n\t\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc form-card__input_dod-opt" spellcheck="false" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>`,
+        formStudy: `<div class="specialties__body">\n\t\t\t\t\t\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t\t\t\t\t\t<div class="card-chapter__form form-card form-card_form-study">\n\t\t\t\t\t\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t\t\t\t\t\t\t\t<h4 class="header-card__dir">Університет <span class="_icon-arrow-down"></span> ${"Форма навчання"}</h4>\n\t\t\t\t\t\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t\t\t\t\t\t<p class="form-card__number form-card__number_form">2</p>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t<div class="form-card__items form-card__items">\n\t\t\t\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Edit" name="form[]">\n\t\t\t\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</form>\n\t\t\t\t\t\t\t</div>`,
+        disc: `<div class="specialties__body">\n\t\t\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t\t\t<div class="card-chapter__form form-card form-card_dis">\n\t\t\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t\t\t\t\t<h4 class="header-card__dir">Дисципліни <span class="_icon-arrow-down"></span> ${"NN00000000"}</h4>\n\t\t\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit</textarea>\n\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t<label class="form-card__label">Шифр: </label>\n\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="NN00000000" name="form[]">\n\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>`,
+        dodOpt: `<div class="specialties__body">\n\t\t\t\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t\t\t\t<div class="card-chapter__form form-card form-card_dod-opt">\n\t\t\t\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t\t\t\t\t\t<h4 class="header-card__dir">Дод. освітні опції <span class="_icon-arrow-down"></span> ${"Edit"}</h4>\n\t\t\t\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="Edit name" name="form[]">\n\t\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc form-card__input_dod-opt" spellcheck="false" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</form>\n\t\t\t\t\t</div>`,
+        spec: `\t<div class="specialties__body">\n\t\t\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t\t\t<div class="card-chapter__form form-card">\n\t\t\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t\t\t\t\t<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ${"Edit short name"}</h4>\n\t\t\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div hidden class="form-card__items form-card__items_number form-card__items_order-1 form-card__items_order-1">\n\t\t\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="form-card__items form-card__items form-card__items_order-2">\n\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Edit short name" name="form[]">\n\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="form-card__items form-card__items_order-3">\n\t\t\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit full name</textarea>\n\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="form-card__items form-card__items_order-4">\n\t\t\t\t\t\t\t\t<label class="form-card__label">Шифр: </label>\n\t\t\t\t\t\t\t\t<div class="form-card__item form-card__item_max-width">\n\t\t\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="000" name="form[]">\n\t\t\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</form>\n\t\t\t\t</div>`
+    };
     window.addEventListener("load", mainFunc);
     function mainFunc() {
         document.addEventListener("click", (function(e) {
@@ -2927,7 +2934,6 @@
                 e.preventDefault();
                 copyCard(target);
             }
-            if (target.closest(".chapter__button")) addCard(target);
             if (target.closest(".form-card__button_copy")) {
                 e.preventDefault();
                 copyLink(target);
@@ -2936,9 +2942,11 @@
             if (target.closest(".header-fillter__button_search")) target.parentElement.parentElement.classList.toggle("_visibility");
             if (target.closest(".header-fillter__button_sort")) target.classList.toggle("_active");
             if (target.closest(".controlls-specialties__button")) {
-                if (target.classList.contains("controlls-specialties__button_spec")) addCardSpec(target);
-                if (target.classList.contains("controlls-specialties__button_dis")) addCardDis(target);
-                if (target.classList.contains("controlls-specialties__button_dod-opt")) addCardDodOpt(target);
+                if (target.classList.contains("controlls-specialties__button_spec")) addCard(target, cards.spec);
+                if (target.classList.contains("controlls-specialties__button_dis")) addCard(target, cards.disc);
+                if (target.classList.contains("controlls-specialties__button_dod-opt")) addCard(target, cards.dodOpt);
+                if (target.classList.contains("controlls-specialties__button_osv-lvl")) addCard(target, cards.osvLvl);
+                if (target.classList.contains("controlls-specialties__button_form-study")) addCard(target, cards.formStudy);
             }
             if (target.closest(".specialties__button_lvl")) {
                 const lvl = document.querySelector("._hidden-body_lvl");
@@ -2970,31 +2978,13 @@
             if (deleteClass) deleteClass.classList.remove("_delete");
         }), 200);
     }
-    function addCardSpec(target) {
+    function addCard(target, card) {
         const header = target.parentElement.nextElementSibling.children[0];
         header.remove();
-        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t\t<div class="specialties__body specialties__body_hidden">\n\t\t\t${header.innerHTML}\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-chapter _delete">\n\t\t\t\t<div class="card-chapter__form form-card">\n\t\t\t\t\t<div class="form-card__header header-card">\n\t\t\t\t \t  <h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ${"Edit name"}</h4>\n\t\t\t\t\t\t<div class="header-card__buttons">\n\t\t\t\t\t\t\t<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>\n\t\t\t\t\t\t\t<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number form-card__items_order-1 form-card__items_order-1">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items form-card__items_order-2">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Edit short name" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_order-3">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit full name</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_order-4">\n\t\t\t\t\t\t<label class="form-card__label">Шифр: </label>\n\t\t\t\t\t\t<div class="form-card__item form-card__item_max-width">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="000" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
+        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t\t<div class="specialties__body specialties__body_hidden">\n\t\t\t${header.innerHTML}\n\t\t</div>\n\t\t${card}`);
         updateFormNumber();
         setTimeout((() => {
             const deleteClass = document.querySelector(".card-chapter._delete");
-            if (deleteClass) deleteClass.classList.remove("_delete");
-        }), 200);
-    }
-    function addCardDis(target) {
-        target.parentElement.nextElementSibling.children[0].remove();
-        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t\t<div class="specialties__body specialties__body_hidden">\n\t\t\t<div class="specialties__card card-specialties card-specialties_header">\n\t\t\t\t<div class="card-specialties__form form-card form-card_dis">\n\t\t\t\t\t<div class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">1</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__full-name">Повна назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__code">Шифр спеціальності</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-specialties _delete">\n\t\t\t\t<div class="card-specialties__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> 0000000000</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-specialties__form form-card form-card_dis">\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Edit title</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<label class="form-card__label">Шифр: </label>\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="0000000000" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
-        updateFormNumber();
-        setTimeout((() => {
-            const deleteClass = document.querySelector(".card-specialties._delete");
-            if (deleteClass) deleteClass.classList.remove("_delete");
-        }), 200);
-    }
-    function addCardDodOpt(target) {
-        target.parentElement.nextElementSibling.children[0].remove();
-        target.parentElement.nextElementSibling.insertAdjacentHTML("afterbegin", `\n\t<div class="specialties__body specialties__body_hidden">\n\t\t\t<div class="specialties__card card-specialties card-specialties_header">\n\t\t\t\t<div class="card-specialties__form form-card form-card_dod-opt">\n\t\t\t\t\t<div class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">1</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__full-name">Назва</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items form-card__items_color">\n\t\t\t\t\t\t<p class="form-card__code">Коментар</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="specialties__body">\n\t\t\t<form action="" class="specialties__card card-specialties _delete">\n\t\t\t\t<div class="card-specialties__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Дод. освітні опції <span class="_icon-arrow-down"></span> Edit title</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-specialties__form form-card form-card_dod-opt">\n\t\t\t\t\t<div hidden class="form-card__items form-card__items_number">\n\t\t\t\t\t\t<p class="form-card__number">2</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="Edit title" name="form[]">\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__items">\n\t\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc form-card__input_dod-opt" spellcheck="false" autocomplete="off" name="form[]" rows="5">Edit description</textarea>\n\t\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>`);
-        updateFormNumber();
-        setTimeout((() => {
-            const deleteClass = document.querySelector(".card-specialties._delete");
             if (deleteClass) deleteClass.classList.remove("_delete");
         }), 200);
     }
@@ -3039,8 +3029,16 @@
         }
     }
     function updateFormNumber() {
+        const numbersForm = document.querySelectorAll(".form-card__number_form");
         const numbers = document.querySelectorAll(".form-card__number");
-        numbers.forEach(((number, i) => {
+        if (numbersForm.length) {
+            numbers.forEach(((number, i) => {
+                number.innerHTML = `${i + 1}`;
+            }));
+            numbersForm.forEach(((number, i) => {
+                number.innerHTML = `${i + 1}`;
+            }));
+        } else if (numbers.length) numbers.forEach(((number, i) => {
             number.innerHTML = `${i + 1}`;
         }));
     }
@@ -3056,22 +3054,6 @@
         if (focusInputCard) focusInputCard.classList.remove("_focus");
         if (focusInputFillter) focusInputFillter.classList.remove("_focus");
     }
-    function swiperUpdate(selector) {
-        const swiper = document.querySelector(selector).swiper;
-        swiper.update();
-    }
-    function addCard(target) {
-        const cards = target.nextElementSibling;
-        if (cards) {
-            const dir = target.previousElementSibling.children[0].children[0].innerHTML;
-            cards.insertAdjacentHTML("afterbegin", `\n\t\t<form action="" class="card-chapter _delete">\n\t\t\t\t<div class="card-chapter__header header-card">\n\t\t\t\t\t<h4 class="header-card__dir">Dashboard <span class="_icon-arrow-down"></span>  ${dir ? dir : "..."}</h4>\n\t\t\t\t\t<button class="header-card__button _icon-delete" type="reset"></button>\n\t\t\t\t</div>\n\t\t\t\t<div class="card-chapter__form form-card" action="#">\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Edit title" name="form[]">\n\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<textarea class="form-card__input form-card__input_desc" autocomplete="off" name="form[]" rows="3">Edit description</textarea>\n\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="form-card__item">\n\t\t\t\t\t\t<input class="form-card__input form-card__input_link" autocomplete="off" type="text" value="https://lorem-ipsum-site.com/" name="form[]">\n\t\t\t\t\t\t<button type="submit" class="form-card__button _icon-done"></button>\n\t\t\t\t\t\t<button type="submit" class="form-card__button form-card__button_copy _icon-copy"></button>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</form>`);
-            setTimeout((() => {
-                const deleteClass = document.querySelector(".card-chapter._delete");
-                if (deleteClass) deleteClass.classList.remove("_delete");
-            }), 200);
-            swiperUpdate(".university__slider");
-        }
-    }
     function removeCard(target) {
         console.log(target.parentElement.parentElement.parentElement.parentElement.parentElement);
         if (target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains("specialties__body")) {
@@ -3080,14 +3062,12 @@
             setTimeout((() => {
                 card.remove();
                 updateFormNumber();
-                if (document.querySelector(".university__slider")) swiperUpdate(".university__slider");
             }), 400);
         } else {
             const card = target.parentElement.parentElement.parentElement.parentElement;
             card.classList.add("_delete");
             setTimeout((() => {
                 card.remove();
-                if (document.querySelector(".university__slider")) swiperUpdate(".university__slider");
             }), 400);
         }
     }
