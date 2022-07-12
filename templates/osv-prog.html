@@ -4,10 +4,10 @@
 		<h2 class="specialties__title">Освітні програми</h2>
 	</div>
 	<div class="specialties__controll controlls-specialties">
-		<button type="submit" class="controlls-specialties__button controlls-specialties__button_osv-prog">Додати</button>
+		<button type="button" class="controlls-specialties__button controlls-specialties__button_osv-prog">Додати</button>
 		<div class="controlls-specialties__input input-fillter">
 			<input class="input-fillter__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Інженерія, ННЕІ, Бакалавр, Денна">
-			<button class="input-fillter__button _icon-search" type="submit"></button>
+			<button class="input-fillter__button _icon-search" type="button"></button>
 		</div>
 		<div class="controlls-specialties__switch switch-visibility">
 			<label class="switch-visibility__label switch-visibility__label_grid _icon-grid" for="grid">
@@ -18,16 +18,13 @@
 			<input hidden type="radio" name="display" class="switch-visibility__table" id="table">
 		</div>
 	</div>
-
 	<div class="specialties__cards specialties__cards_padding-bottom">
-
 		<div class="specialties__body specialties__body_hidden">
 			<div class="specialties__card card-chapter card-chapter_header">
 				<div class="card-chapter__form form-card form-card_osv-prog form-card_color">
 					<div class="form-card__items form-card__items_number">
 						<p class="form-card__number form-card__number_form">1</p>
 					</div>
-
 					<div class="form-card__items">
 						<p class="form-card__code">Назва</p>
 					</div>
@@ -46,21 +43,18 @@
 					<div class="form-card__items">
 						<p class="form-card__code">Форма навчання</p>
 					</div>
-
+					<div class="form-card__items">
+						<p class="form-card__code">Посилання</p>
+					</div>
 					<div class="form-card__items form-card__items_noborder">
 						<p class="form-card__code">Управлiння</p>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div class="specialties__body">
 			<form action="" class="specialties__card card-chapter">
-
-
-
 				<div class="card-chapter__form form-card form-card_osv-prog" data-one-select>
-
 					<div class="form-card__header header-card">
 						<h4 class="header-card__dir">Дод. освітні опції <span class="_icon-arrow-down"></span> Інженерія програмного забезпечення</h4>
 						<div class="header-card__buttons">
@@ -68,35 +62,29 @@
 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
 						</div>
 					</div>
-
-
 					<div hidden class="form-card__items form-card__items_number">
 						<p class="form-card__number form-card__number_form">2</p>
 					</div>
-
-
 					<!-- <div class="form-card__items form-card__items">
 																																					<div class="form-card__item">
 																																						<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Інженерія програмного забезпечення" name="form[]">
-																																						<button type="submit" class="form-card__button _icon-done"></button>
+																																						<button type="button" class="form-card__button _icon-done"></button>
 																																					</div>
 																																				</div> -->
 					<div class="form-card__items">
 						<div class="form-card__item">
 							<textarea class="form-card__input form-card__input_desc form-card__input_dod-opt" spellcheck="false" autocomplete="off" name="form[]" rows="2">Інженерія програмного забезпечення</textarea>
-							<button type="submit" class="form-card__button _icon-done"></button>
+							<button type="button" class="form-card__button _icon-done"></button>
 						</div>
 					</div>
-
 					<div class="form-card__items">
 						<div class="form-card__item">
 							<textarea class="form-card__input form-card__input_desc form-card__input_dod-opt" spellcheck="false" autocomplete="off" name="form[]" rows="5">Lorem impsu dolor amet</textarea>
-							<button type="submit" class="form-card__button _icon-done"></button>
+							<button type="button" class="form-card__button _icon-done"></button>
 						</div>
 					</div>
 					<div class="form-card__items form-card__items_column">
 						<label class="form-card__label">Спеціальність</label>
-
 						<div class="form-card__item form-card__item_select-visible">
 							<select class="form-card__select" data-scroll="80" data-label data-submit name="form[]">
 								<option value="" selected>- Обрати -</option>
@@ -108,10 +96,8 @@
 							</select>
 						</div>
 					</div>
-
 					<div class="form-card__items form-card__items_column">
 						<label class="form-card__label">Структурний підрозділ</label>
-
 						<div class="form-card__item form-card__item_select-visible">
 							<select class="form-card__select" data-scroll="80" data-label data-submit name="form[]">
 								<option value="" selected>- Обрати -</option>
@@ -123,10 +109,8 @@
 							</select>
 						</div>
 					</div>
-
 					<div class="form-card__items form-card__items_column">
 						<label class="form-card__label">Освітній ступінь</label>
-
 						<div class="form-card__item form-card__item_select-visible">
 							<select class="form-card__select" data-scroll="80" data-label data-submit name="form[]">
 								<option value="" selected>- Обрати -</option>
@@ -137,10 +121,8 @@
 							</select>
 						</div>
 					</div>
-
 					<div class="form-card__items form-card__items_column">
 						<label class="form-card__label">Форма навчання</label>
-
 						<div class="form-card__item form-card__item_select-visible">
 							<select class="form-card__select" data-scroll="80" data-label data-submit name="form[]">
 								<option value="" selected>- Обрати -</option>
@@ -149,13 +131,17 @@
 							</select>
 						</div>
 					</div>
-
-
+					<div class="form-card__items">
+						<div class="form-card__item form-card__item_visible">
+							<input class="form-card__input form-card__input_link" autocomplete="off" type="text" value="https://lorem-ipsum-site.com/" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+							<button type="button" class="form-card__button form-card__button_copy _icon-copy"></button>
+							<span class="form-card__span">Copied</span>
+						</div>
+					</div>
 				</div>
 			</form>
 		</div>
-
-
 	</div>
 	<!-- </div> -->
 </section>

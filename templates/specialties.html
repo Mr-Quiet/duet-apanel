@@ -1,312 +1,255 @@
- <section class="page__specialties specialties">
- 	<!-- <div class="specialties__container"> -->
- 	<div class="specialties__header">
- 		<h2 class="specialties__title">Спеціальності</h2>
- 	</div>
- 	<div class="specialties__controll controlls-specialties">
- 		<button type="submit" class="controlls-specialties__button controlls-specialties__button_spec">Додати</button>
- 		<div class="controlls-specialties__input input-fillter">
- 			<input class="input-fillter__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ІПЗ, Інженерія програмного, 121">
- 			<button class="input-fillter__button _icon-search" type="submit"></button>
- 		</div>
- 		<div class="controlls-specialties__switch switch-visibility">
- 			<label class="switch-visibility__label switch-visibility__label_grid _icon-grid" for="grid">
- 			</label>
- 			<label class="switch-visibility__label switch-visibility__label_table _icon-table" for="table">
- 			</label>
- 			<input hidden type="radio" name="display" class="switch-visibility__grid" id="grid">
- 			<input hidden type="radio" name="display" class="switch-visibility__table" id="table">
- 		</div>
- 	</div>
-
- 	<div class="specialties__cards">
-
- 		<div class="specialties__body specialties__body_hidden">
- 			<div class="specialties__card card-chapter card-chapter_header">
- 				<div class="card-chapter__form form-card form-card_color">
- 					<div class="form-card__items form-card__items_number">
- 						<p class="form-card__number">1</p>
- 					</div>
-
- 					<div class="form-card__items">
- 						<p class="form-card__code">Шифр спеціальності</p>
- 					</div>
-
- 					<div class="form-card__items">
- 						<p class="form-card__short-name">Коротка назва</p>
- 					</div>
-
- 					<div class="form-card__items">
- 						<p class="form-card__full-name">Повна назва</p>
-
- 					</div>
-
-
- 					<div class="form-card__items form-card__items_noborder">
- 						<p class="form-card__code">Управлiння</p>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
-
- 				<div class="card-chapter__form form-card">
-
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
-
-
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1 form-card__items_order-1">
- 						<p class="form-card__number">2</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ІПЗ" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Інженерія програмного забеспечення</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="121" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
-
- 				<div class="card-chapter__form form-card">
-
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
- 						<p class="form-card__number">3</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ОІОП" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Облік та оподаткування</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="071" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
-
- 				<div class="card-chapter__form form-card">
-
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
-
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
- 						<p class="form-card__number">4</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ФБСС" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Фінанси, банківська справа та страхування</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="072" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
- 				<div class="card-chapter__form form-card">
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
-
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
- 						<p class="form-card__number">5</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Менеджмент" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Менеджмент</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="073" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
- 				<div class="card-chapter__form form-card">
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
- 						<p class="form-card__number">6</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ПТБД" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Підприємництво, торгівля та біржова діяльність</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="076" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 		<div class="specialties__body">
- 			<form action="" class="specialties__card card-chapter">
-
-
-
- 				<div class="card-chapter__form form-card">
- 					<div class="form-card__header header-card">
- 						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
- 						<div class="header-card__buttons">
- 							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
- 							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
- 						</div>
- 					</div>
- 					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
- 						<p class="form-card__number">7</p>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-2">
- 						<div class="form-card__item">
- 							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Право" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-3">
- 						<div class="form-card__item">
- 							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Право</textarea>
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
-
- 					<div class="form-card__items form-card__items_order-4">
- 						<label class="form-card__label">Шифр: </label>
- 						<div class="form-card__item form-card__item_max-width">
- 							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="081" name="form[]">
- 							<button type="submit" class="form-card__button _icon-done"></button>
- 						</div>
- 					</div>
- 				</div>
- 			</form>
- 		</div>
-
- 	</div>
-
- 	<!-- </div> -->
- </section>
+<section class="page__specialties specialties">
+	<!-- <div class="specialties__container"> -->
+	<div class="specialties__header">
+		<h2 class="specialties__title">Спеціальності</h2>
+	</div>
+	<div class="specialties__controll controlls-specialties">
+		<button type="button" class="controlls-specialties__button controlls-specialties__button_spec">Додати</button>
+		<div class="controlls-specialties__input input-fillter">
+			<input class="input-fillter__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ІПЗ, Інженерія програмного, 121">
+			<button class="input-fillter__button _icon-search" type="button"></button>
+		</div>
+		<div class="controlls-specialties__switch switch-visibility">
+			<label class="switch-visibility__label switch-visibility__label_grid _icon-grid" for="grid">
+			</label>
+			<label class="switch-visibility__label switch-visibility__label_table _icon-table" for="table">
+			</label>
+			<input hidden type="radio" name="display" class="switch-visibility__grid" id="grid">
+			<input hidden type="radio" name="display" class="switch-visibility__table" id="table">
+		</div>
+	</div>
+	<div class="specialties__cards">
+		<div class="specialties__body specialties__body_hidden">
+			<div class="specialties__card card-chapter card-chapter_header">
+				<div class="card-chapter__form form-card form-card_color">
+					<div class="form-card__items form-card__items_number">
+						<p class="form-card__number">1</p>
+					</div>
+					<div class="form-card__items">
+						<p class="form-card__code">Шифр спеціальності</p>
+					</div>
+					<div class="form-card__items">
+						<p class="form-card__short-name">Коротка назва</p>
+					</div>
+					<div class="form-card__items">
+						<p class="form-card__full-name">Повна назва</p>
+					</div>
+					<div class="form-card__items form-card__items_noborder">
+						<p class="form-card__code">Управлiння</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1 form-card__items_order-1">
+						<p class="form-card__number">2</p>
+					</div>
+					<div class="form-card__items form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ІПЗ" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Інженерія програмного забеспечення</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="121" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
+						<p class="form-card__number">3</p>
+					</div>
+					<div class="form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ОІОП" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Облік та оподаткування</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="071" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
+						<p class="form-card__number">4</p>
+					</div>
+					<div class="form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ФБСС" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Фінанси, банківська справа та страхування</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="072" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
+						<p class="form-card__number">5</p>
+					</div>
+					<div class="form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Менеджмент" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Менеджмент</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="073" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
+						<p class="form-card__number">6</p>
+					</div>
+					<div class="form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="ПТБД" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Підприємництво, торгівля та біржова діяльність</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="076" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="specialties__body">
+			<form action="" class="specialties__card card-chapter">
+				<div class="card-chapter__form form-card">
+					<div class="form-card__header header-card">
+						<h4 class="header-card__dir">Спеціальності <span class="_icon-arrow-down"></span> ІПЗ</h4>
+						<div class="header-card__buttons">
+							<button class="header-card__button header-card__button_copy _icon-copy" type="reset"></button>
+							<button class="header-card__button header-card__button_delete _icon-delete" type="reset"></button>
+						</div>
+					</div>
+					<div hidden class="form-card__items form-card__items_number form-card__items_order-1">
+						<p class="form-card__number">7</p>
+					</div>
+					<div class="form-card__items form-card__items_order-2">
+						<div class="form-card__item">
+							<input class="form-card__input form-card__input_title" autocomplete="off" type="text" value="Право" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-3">
+						<div class="form-card__item">
+							<textarea class="form-card__input form-card__input_desc" spellcheck="false" autocomplete="off" name="form[]" rows="3">Право</textarea>
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+					<div class="form-card__items form-card__items_order-4">
+						<label class="form-card__label">Шифр: </label>
+						<div class="form-card__item form-card__item_max-width">
+							<input class="form-card__input form-card__input_code" autocomplete="off" type="text" value="081" name="form[]">
+							<button type="button" class="form-card__button _icon-done"></button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- </div> -->
+</section>
